@@ -1,0 +1,6 @@
+# CrewAI with FastMCP - curso educativo
+# Python 3.10+ recomendado (fastmcp e crewai recentes). Python 3.9: apenas crewai.
+
+crewai>=0.5.0
+# Opcional para lição 2 (ferramentas MCP): fastmcp e crewai-tools (Python 3.10+)
+# pip install fastmcp crewai-tools

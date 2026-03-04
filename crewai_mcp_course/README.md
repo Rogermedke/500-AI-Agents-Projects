@@ -52,6 +52,31 @@ graph TD
     C -->|Final Report| E[Output]
 ```
 
+## Como abrir e executar o projeto
+
+Este repositório é um **curso com scripts Python**, não um app com npm. Fluxo recomendado:
+
+1. Abra a pasta do curso no editor (ex.: `crewai_mcp_course/`).
+2. Use **Python 3.10 ou superior** (obrigatório).
+3. Crie e ative um ambiente virtual dentro da pasta do curso:
+   ```bash
+   cd crewai_mcp_course
+   python3.10 -m venv .venv   # ou python3.11, py -3.11, etc.
+   source .venv/bin/activate   # macOS/Linux
+   ```
+4. Instale as dependências e execute as lições:
+   ```bash
+   pip install -r requirements.txt
+   python lesson1_setup.py
+   python lesson2_mcp_integration.py
+   python lesson3_advanced_patterns.py
+   ```
+5. (Opcional) Para as lições chamarem um LLM, defina `OPENAI_API_KEY` ou `ANTHROPIC_API_KEY`. Para a lição 2 com MCP, defina também `FASTMCP_URL` e `FASTMCP_API_KEY`.
+
+Para verificar se o ambiente está ok: `python check_environment.py`.
+
+---
+
 ## Getting Started
 
 ### Using pip (traditional method)
@@ -86,7 +111,10 @@ pip install uv
 2. Create and activate a virtual environment:
 ```bash
 uv venv
-source .venv/Scripts/activate
+# macOS/Linux:
+source .venv/bin/activate
+# Windows (PowerShell):
+# .venv\Scripts\Activate.ps1
 ```
 
 3. Install dependencies:
@@ -109,7 +137,7 @@ python lesson3_advanced_patterns.py
 
 ## Requirements
 
-- Python 3.8+
+- **Python 3.10+** (obrigatório: CrewAI e FastMCP usam sintaxe 3.10+)
 - CrewAI library
 - FastMCP library
 - Access to an MCP server
